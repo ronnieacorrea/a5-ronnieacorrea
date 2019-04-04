@@ -18,11 +18,13 @@ public class Nigiri implements Sushi {
 		this.type = type;
 	}
 
+	@Override 
 	public String getName() {
 		// convert type to string to get name
 		return this.type.toString().toLowerCase() + " nigiri";
 	}
 
+	@Override 
 	public IngredientPortion[] getIngredients() {
 		/*
 		 * creating array of ingredient portions
@@ -50,7 +52,7 @@ public class Nigiri implements Sushi {
 	return arr;
 	}
 
-
+	@Override 
 	public int getCalories() {
 		// initializing calorie count 
 		int calories = 0;
@@ -81,6 +83,7 @@ public class Nigiri implements Sushi {
 		return calories;
 	}
 
+	@Override 
 	public double getCost() {
 		/* 
 		 * initializing total cost
@@ -114,11 +117,12 @@ public class Nigiri implements Sushi {
 		return cost;
 	}
 
-
+	@Override 
 	public boolean getHasRice() {
 		return true; // all Nigiri has rice
 	}
 
+	@Override 
 	public boolean getHasShellfish() {
 		// checking if type passed to constructor is shellfish
 		if (this.type.equals(type.TUNA)) {
@@ -144,6 +148,7 @@ public class Nigiri implements Sushi {
 		return false;
 	}
 
+	@Override 
 	public boolean getIsVegetarian() {
 		return false; // not vegetarian - has fish
 	}

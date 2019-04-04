@@ -14,10 +14,12 @@ public class PlateImpl implements Plate {
 	}
 
 	// getter for contents
+	@Override
 	public Sushi getContents() {
 		return contents;
 	}
 
+	@Override 
 	public Sushi removeContents() {
 		Sushi prior_contents = contents; // storing initial contents
 		if (contents == null) {
@@ -29,6 +31,7 @@ public class PlateImpl implements Plate {
 	}
 	
 	// checking if plate is empty 
+	@Override 
 	public boolean hasContents() {
 		if (contents == null) {
 			return false;
@@ -38,16 +41,19 @@ public class PlateImpl implements Plate {
 	}
 
 	// getter for price
+	@Override 
 	public double getPrice() {
 		return price;
 	}
 
 	// getter for color
+	@Override 
 	public Color getColor() {
 		return color;
 	}
 	
 	// calculating profit from price, cost of contents
+	@Override 
 	public double getProfit() {
 		if (contents == null) { 
 			return 0.0; // no profit if plate is empty
@@ -61,6 +67,7 @@ public class PlateImpl implements Plate {
 	/* setting contents to given input.
 	 * throwing exception if input is null or if plate price is illegal
 	 */
+	@Override 
 	public void setContents(Sushi s) throws PlatePriceException {
 		if (s.equals(null)) {
 			throw new IllegalArgumentException("sushi cannot be null");
