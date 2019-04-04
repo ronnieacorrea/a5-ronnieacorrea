@@ -18,16 +18,22 @@ public class IngredientPortionImpl implements IngredientPortion {
 		
 	}
 	
+	@Override 
 	public Ingredient getIngredient() {
-		return ingredient;
+		return ingredient; // returns given ingredient 
 	}
 
-	
+	@Override 
 	public double getAmount() {
-		return amount;
+		return amount; //returns amount 
 	
 	}
 	
+	@Override 
+	/* sums amounts of identical ingredients 
+	 * input: ingredient that is same as this
+	 * output: new ingredient portion with combined amounts
+	 */
 	public IngredientPortion combine(IngredientPortion other) {
 		double temp = 0.0;
 		if (!this.getIngredient().equals(other.getIngredient())) {
@@ -39,31 +45,38 @@ public class IngredientPortionImpl implements IngredientPortion {
 		return new IngredientPortionImpl(ingredient, temp); 
 	}
 
+	@Override 
 	public String getName() {
-		return ingredient.getName();
+		return ingredient.getName(); // returns ingredient's name
 	}
 
+	@Override 
+	// returns ingredient's amount
 	public double getCalories() {
-		return ingredient.getCaloriesPerOunce() * amount;
+		return ingredient.getCaloriesPerOunce() * amount; 
 	}
 
+	@Override 
+	// returns ingredient's cost 
 	public double getCost() {
-		// TODO Auto-generated method stub
 		return ingredient.getPricePerOunce() * amount;
 	}
 
+	@Override 
+	// returns if ingredient is vegetarian
 	public boolean getIsVegetarian() {
-		// TODO Auto-generated method stub
 		return ingredient.getIsVegetarian();
 	}
 
+	@Override
+	// returns if ingredient is rice
 	public boolean getIsRice() {
-		// TODO Auto-generated method stub
 		return ingredient.getIsRice();
 	}
 
+	@Override 
+	// returns if ingredient is shellfish
 	public boolean getIsShellfish() {
-		// TODO Auto-generated method stub
 		return ingredient.getIsShellfish();
 	}
 	}

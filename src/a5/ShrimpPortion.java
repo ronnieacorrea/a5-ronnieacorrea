@@ -15,9 +15,9 @@ public class ShrimpPortion extends IngredientPortionImpl implements IngredientPo
 	 * input - ShrimpPortion
 	 * summing up amounts and returning combined ShrimpPortion
 	 */
-	
+
 	public ShrimpPortion combine(ShrimpPortion other) {
 		this.amount += other.getAmount();
-	return this;
-}
+		return this;
+	}
 }

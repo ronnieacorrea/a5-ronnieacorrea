@@ -1,6 +1,6 @@
 package a5;
 
-	// creating TunaPortion, subclass of IngredientPortionImpl
+// creating TunaPortion, subclass of IngredientPortionImpl
 
 public class TunaPortion extends IngredientPortionImpl implements IngredientPortion {
 	// initializing new static Ingredient
@@ -18,7 +18,7 @@ public class TunaPortion extends IngredientPortionImpl implements IngredientPort
 
 	public TunaPortion combine(TunaPortion other) {
 		this.amount += other.getAmount();
-	return this;
-}
+		return this;
+	}
 
 }

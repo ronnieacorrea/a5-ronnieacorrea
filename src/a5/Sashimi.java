@@ -20,11 +20,13 @@ public class Sashimi implements Sushi {
 		this.type = type;
 	}
 
+	@Override 
 	public String getName() {
 		// convert type to string to get name
 		return this.type.toString().toLowerCase() + " sashimi";
 	}
 
+	@Override 
 	public IngredientPortion[] getIngredients() { 
 		// creating array with type passed into constructor
 		IngredientPortion[] arr = new IngredientPortion[1];
@@ -46,6 +48,7 @@ public class Sashimi implements Sushi {
 		return arr;
 	}
 
+	@Override 
 	public int getCalories() {
 		// getting calories of type passed to constructor
 		int calories = 0;
@@ -73,6 +76,7 @@ public class Sashimi implements Sushi {
 		return calories;
 	}
 
+	@Override 
 	public double getCost() {
 		// getting cost of type passed to constructor
 		double cost = 0;
@@ -99,11 +103,13 @@ public class Sashimi implements Sushi {
 		}
 		return cost;
 	}
-
+	
+	@Override 
 	public boolean getHasRice() {
 		return false; // sashimi has no rice
 	}
-
+	
+	@Override 
 	public boolean getHasShellfish() {
 		// checking if type passed to constructor is shellfish
 		if (this.type.equals(type.TUNA)) {
@@ -129,6 +135,7 @@ public class Sashimi implements Sushi {
 		return false;
 	}
 
+	@Override 
 	public boolean getIsVegetarian() {
 		return false; // sashimi is not vegetarian
 	}

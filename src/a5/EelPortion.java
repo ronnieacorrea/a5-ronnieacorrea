@@ -1,6 +1,6 @@
 package a5;
 
-	// creating EelPortion, subclass of IngredientPortionImpl
+// creating EelPortion, subclass of IngredientPortionImpl
 
 public class EelPortion extends IngredientPortionImpl implements IngredientPortion {
 	private static Eel eel = new Eel();
@@ -8,7 +8,7 @@ public class EelPortion extends IngredientPortionImpl implements IngredientPorti
 
 	public EelPortion(double amount) {
 		super(eel, amount);
-		
+
 	}
 
 	/* combining two portions
@@ -17,7 +17,7 @@ public class EelPortion extends IngredientPortionImpl implements IngredientPorti
 	 */
 	public EelPortion combine(EelPortion other) {
 		this.amount += other.getAmount();
-	return this;
-}
+		return this;
+	}
 
 }

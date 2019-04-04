@@ -10,14 +10,14 @@ public class YellowtailPortion extends IngredientPortionImpl implements Ingredie
 		super(yellowtail, amount);
 	}
 
-	
+
 	/* combining two portions
 	 * input - YellowtailPortion
 	 * summing up amounts and returning combined YellowtailPortion
 	 */
 	public YellowtailPortion combine(YellowtailPortion other) {
 		this.amount += other.getAmount();
-	return this;
-}
+		return this;
+	}
 
 }

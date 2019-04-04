@@ -64,10 +64,12 @@ public class Roll implements Sushi {
 		return temp;
 	}
 
+	@Override 
 	public String getName() {
 		return name; // returns given name 
 	}
 
+	@Override 
 	public IngredientPortion[] getIngredients() {
 		// return copy of ingredient portion array passed to constructor
 		return Arrays.copyOf(roll_ingredients, roll_ingredients.length);
@@ -88,6 +90,7 @@ public class Roll implements Sushi {
 
 	}
 
+	@Override 
 	public double getCost() {
 		/*
 		 * going through array of roll ingredient portions
@@ -102,6 +105,7 @@ public class Roll implements Sushi {
 		return cost;
 	}
 
+	@Override 
 	public boolean getHasRice() {
 		/*
 		 * going through array of roll ingredient portions

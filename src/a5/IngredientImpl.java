@@ -21,10 +21,12 @@ public class IngredientImpl implements Ingredient {
 		this.isShellfish = isShellfish;
 	}
 
+	@Override 
 	public String getName() {
 		return name; // returns given name
 	}
 
+	@Override 
 	public double getCaloriesPerDollar() {
 		/*
 		 * divides given calories by price result: calories per dollar
@@ -32,14 +34,17 @@ public class IngredientImpl implements Ingredient {
 		return caloriesPerOunce / pricePerOunce;
 	}
 
+	@Override 
 	public int getCaloriesPerOunce() {
 		return caloriesPerOunce; // returns given calories per ounce
 	}
 
+	@Override 
 	public double getPricePerOunce() {
 		return pricePerOunce; // returns given price per ounce
 	}
 
+	@Override 
 	public boolean equals(Ingredient other) {
 		/*
 		 * input - Ingredient 
@@ -56,14 +61,17 @@ public class IngredientImpl implements Ingredient {
 		return false;
 	}
 
+	@Override 
 	public boolean getIsVegetarian() {
 		return isVegetarian; //returns true if is Vegetarian
 	}
 
+	@Override 
 	public boolean getIsRice() {
 		return isRice; // returns true if is Rice
 	}
 
+	@Override 
 	public boolean getIsShellfish() {
 		return isShellfish; // returns true if is Shellfish
 	}
